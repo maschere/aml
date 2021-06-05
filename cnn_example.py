@@ -74,7 +74,7 @@ class CNN(nn.Module):
         self.bn = nn.BatchNorm2d(6)
         self.conv2 = nn.Conv2d(6, 12, 3, stride=2)
         self.head = nn.Linear(30*30*12, num_classes) # how to calculate this?
-        # W' =  (W-K+2*P)/S
+        # W' =  (W-K+2*P)/S+1
         # W'' = int((int((128-5)/2+1)-3)/2+1)
         # n = W'' * W'' * C
 
